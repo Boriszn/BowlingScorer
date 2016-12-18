@@ -1,0 +1,6 @@
+﻿.pin { width: 40px }
+.score { font-size: 13px }
+.calculate-btn {
+    border-bottom-width: 0;
+    margin-bottom: 14px
+}

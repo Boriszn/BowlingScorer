@@ -1,0 +1,87 @@
+﻿
+<style type="text/css">
+    .table > tbody > tr > td, .table > tbody > tr > th, 
+    .table > tfoot > tr > td, .table > tfoot > tr > th, 
+    .table > thead > tr > td, .table > thead > tr > th {
+        border-top: 1px solid #ddd;
+        line-height: 1.42857;
+        padding: 0;
+        vertical-align: top;
+    }
+</style>
+
+<div class="container" style="margin-top: 6%; width: 90%;">
+    <h1>Scoring table</h1>
+    <div class="row show-grid">
+        <div class="col-md-9">
+            <button id="calculateScoreBtn" type="button" class="btn btn-primary calculate-btn">Calculate</button>
+        </div>
+    </div>
+    <div class="row show-grid">
+        <div class="col-md-14">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <tr class="pin" data-bind="foreach: frames">
+                        <td>
+                            <table class="table table-bordered">
+                                <tr>
+                                    <td>
+                                        <select class="pin" data-bind="value: pinFirst, changeSelectValue: pinFirst">
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select class="pin" data-bind="value: pinSecond, changeSelectValue: pinSecond">
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </td> 
+                                    <td data-bind="visible: pinExtra == 0">
+                                        <select class="pin" data-bind="value: pinExtra" style="width: 40px;">
+                                            <option value=""></option>
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">
+                                        <span class="col-md-offset-4 label label-info score" data-bind="text: score"></span>
+                                    </td> 
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
